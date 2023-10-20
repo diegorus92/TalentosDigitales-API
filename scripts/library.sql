@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2023 a las 07:42:18
+-- Tiempo de generación: 21-10-2023 a las 00:17:34
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 7.4.30
 
@@ -28,16 +28,13 @@ USE `library`;
 --
 -- Estructura de tabla para la tabla `books`
 --
--- Creación: 13-10-2023 a las 09:18:07
--- Última actualización: 14-10-2023 a las 05:34:05
---
 
 CREATE TABLE `books` (
   `id` int NOT NULL,
   `name` varchar(30) NOT NULL,
   `author` varchar(30) NOT NULL,
   `category` varchar(30) NOT NULL,
-  `publication-date` date NOT NULL,
+  `publicationDate` date NOT NULL,
   `isbn` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
@@ -45,7 +42,7 @@ CREATE TABLE `books` (
 -- Volcado de datos para la tabla `books`
 --
 
-INSERT INTO `books` (`id`, `name`, `author`, `category`, `publication-date`, `isbn`) VALUES
+INSERT INTO `books` (`id`, `name`, `author`, `category`, `publicationDate`, `isbn`) VALUES
 (1, 'The Shining', 'Stephen King', 'Thriller', '1977-01-28', '978-0593311233'),
 (2, 'Around the World in 80 Days', 'Julio Verne', 'Adventure', '1973-01-30', '978-8427299887'),
 (3, 'El Principito', 'Antoine de Saint-Exupéry', 'Novel', '1943-04-06', '9788478887194');
