@@ -31,13 +31,13 @@ class BooksController{
         try{
             const book = req.body;
             if(book.id == null || book.name == null || book.author == null || book.publicationDate == null || book.isbn == null)
-                throw new Error("One or more attributes are invalids");
+                throw new Error("One or more attributes are invalids");//Throw Error
 
             const [result] = await poolRequest.query(
                 `UPDATE books SET name = ?, author = ?, category = ?, publicationDate = ?, isbn = ? WHERE id = ?`,
                 [book.name, book.author, book.category, book.publicationDate, book.isbn, book.id]
             );
-            if(result.affectedRows == 0) throw new Error("Book not found");
+            if(result.affectedRows == 0) throw new Error("Book not found");//Throw Error
             res.json({"Book updated" : result.affectedRows});
         }
         catch(e){
